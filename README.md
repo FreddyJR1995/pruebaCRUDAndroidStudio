@@ -8,6 +8,9 @@
 <p>El asistente de firebase nos indica donde copiamos el archivo google-services.json y donde añadimso las dependencias. Finalmente corremos la aplicación</p></br>
 <h1>MainActivity</h1></br>
 <p>Esta es la actividad donde se desarrollo el registro de usuarios, principalmente lo que realiza es usar FirebaseAuth para la autenticación y un DatabaseReference para mandar los datos a una colección de usuarios en RealtimeDatabase. A continuación se mostrará la imagen de dicha pantalla</p></br>
+<p align="center">
+  <img src="/imagenes/imgRegistro.jpg" width="350">
+</p>
 <h2>Funciones</h2></br>
 <h3>OnCreate</h3></br>
 <p>Aprovechando que el onCreate se ejecuta al iniciar la actividad, se creo un evento para pasar los datos a unas variables, y llamar una función de registro siempre que se de click sobre el botón.</p></br>
@@ -18,7 +21,10 @@
 <h3>onStart</h3></br>
 <p>Esta función controla si ya existe una sesión iniciada en base al metodo getCurrentUser del objeto FirebaseAuth para en el caso de ya haber iniciado sesión no vuleva a ingresar los datos del login. </p></br>
 <h1>LoginActivity</h1></br>
-<p>Esta actividad permite iniciar sesión usadno de igual forma FirebaseAuth. A continuación se puede ver la venta de inicio de sesión.>/p></br>
+<p>Esta actividad permite iniciar sesión usadno de igual forma FirebaseAuth. A continuación se puede ver la venta de inicio de sesión.</p></br>
+<p align="center">
+  <img src="/imagenes/imgInicio.jpg" width="350">
+</p>
 <h2>Funciones</h2></br>
 <h3>onCreate</h3></br>
 <p>De igual forma que en el registro se crea un evento al boton de login, se toman los datos se los pasao a unas variables y se llama a la función loginUser.</p></br>
@@ -30,6 +36,9 @@
 <p>En primer lugar debemos crear los iconos del menú. Esto lo hacemos facilmente dando click cobre res, Nuevo, Image Asset, se abre la ventana de configuración y seleccionamos el tipo de icono y el icono en si. En el mismo res se creo una carpeta de menu aqui incorporamos el menu_main. Este menú main contiene los 3 iconos que creamos (nuevo, guardar, eliminar) para cargarlos en la ventana de perfil.</p></br>
 <h1>ProfileActivity</h1></br>
 <p>En esta actividad manejamos nuestra agenda. A primera vista nos encontraremos con el menu creado segudio de el boton de cerrar sesión y el nombre de quien inicio sesión. Luego encontramos los EditText para agregar la información de los contactos. Finalmente se observa la lista de contactos en un ListView. A continuación se podrá ver el diseño final.</p></br>
+<p align="center">
+  <img src="/imagenes/imgPerfil.jpg" width="350">
+</p>
 <h2>Funciones</h2></br>
 <h3>onCreate</h3></br>
 <p>Aqui esta la instanciación de de los campos y objetos necesarios. Despues llamamos a la función listarDatos, luego a nuestro ListView llamado ContactsList le adjuntamos un evento para tomar los datos y pasarlo a un objeto Contacto. Después mediante un evneto manejamos el cierre de sesión, aqui llamamos al metodo signOut del objeto FirebaseAuth.</p></br>
