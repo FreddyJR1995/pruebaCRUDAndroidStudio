@@ -62,8 +62,7 @@ Contacto contactSelected;
         emailContact=(EditText) findViewById(R.id.TxtCorreoContacto);
         phoneContact=(EditText) findViewById(R.id.TxtNumContacto);
         ContactsList=(ListView) findViewById(R.id.lstContactos); 
-        
-        inicializarFirebase();
+
         listarDatos();
         //Obtener los datos del contacto seleccionado en un nuevo Objeto Contacto
         ContactsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -87,12 +86,7 @@ Contacto contactSelected;
         //llamado de la funcion para el nombre del usuario que inicia sesión
         getUserInfo();
     }
-    
-    private void inicializarFirebase(){
-        FirebaseApp.initializeApp(this);
-        firebaseDB=FirebaseDatabase.getInstance();
-        firebasereference=firebaseDB.getReference();
-    }
+
     //funcion para traer el listado de contactos de firebase
     private void listarDatos(){
         mDatabase.child("Contactos").addValueEventListener(new ValueEventListener() {
@@ -126,7 +120,9 @@ Contacto contactSelected;
         String nContact=nameContact.getText().toString();
         String cContact=emailContact.getText().toString();
         String pContact=phoneContact.getText().toString();
+
         switch (item.getItemId()){
+
             case R.id.icon_add:{
                 if(!nContact.isEmpty() && !cContact.isEmpty() && !pContact.isEmpty()) {
                     //Lllevar los datos a un objeto Contacto
@@ -143,6 +139,7 @@ Contacto contactSelected;
                 }
                 break;
             }
+
             case R.id.icon_save:{
                 //Crear un objeto Persona
                 Contacto c=new Contacto();
@@ -155,6 +152,7 @@ Contacto contactSelected;
                 Toast.makeText(this, "Contacto Actualizado Correctamente", Toast.LENGTH_SHORT).show();
                 break;
             }
+
             case R.id.icon_delete:{
                 //Creo un objeto contacto
                 Contacto c=new Contacto();
@@ -173,6 +171,7 @@ Contacto contactSelected;
         }
         return true;
     }
+
     //Función para obetener los datos del usuario que inicio sesión
     private void getUserInfo(){
         //Obtengeo el id del usuario seleccionado
