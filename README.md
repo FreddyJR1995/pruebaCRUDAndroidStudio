@@ -2,7 +2,7 @@
 <h3>Freddy Valverde</h3></br>
 <h3>Desarrollo de Aplicaciones Móviles</h3></br>
 <h1>Video explicativo del funcionamiento de la aplicación</h1></br>
-<a href="https://www.youtube.com/watch?v=tJT5OmoZI0Y">
+<a href="https://www.youtube.com/watch?v=tJT5OmoZI0Y">Click Aqui para ver</a></br>
 <h1>Configuración de Firebase y Android Studio</h1></br>
 <h2>En Firebase</h2></br>
 <p>Se accedio a la consola de firebase, se creó un proyecto, seguido de una aplicación para android, aqui el asistente de firebase nos pide el nombre del paquete de la aplicación, una cadena de sha1 que la generamos en nuestro proyecto con gradle. A continuación se solicita que descarguemos el archivo google-services.json y lo peguemos en la carpeta indicada por el asistente de firebase. Finalmente se añadio las dependecias de firebase en gradle a nivel de proyecto y de app.</p></br>
