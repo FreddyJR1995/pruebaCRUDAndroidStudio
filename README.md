@@ -9,8 +9,8 @@
 <h2>En Android Studio</h2></br>
 <p>El asistente de firebase nos indica donde copiamos el archivo google-services.json y donde añadimso las dependencias. Finalmente corremos la aplicación</p></br>
 <p align="center">
-  <img src="/Capturas/depenProyecto.jpg" width="500"></br>
-  <img src="/Capturas/depenApp.jpg" width="500">
+  <img src="/Capturas/depenProyecto.JPG" width="500"></br>
+  <img src="/Capturas/depenApp.JPG" width="500">
 </p>
 <h1>MainActivity</h1></br>
 <p>Esta es la actividad donde se desarrollo el registro de usuarios, principalmente lo que realiza es usar FirebaseAuth para la autenticación y un DatabaseReference para mandar los datos a una colección de usuarios en RealtimeDatabase. A continuación se mostrará la imagen de dicha pantalla</p></br>
@@ -21,7 +21,7 @@
 <h3>OnCreate</h3></br>
 <p>Aprovechando que el onCreate se ejecuta al iniciar la actividad, se creo un evento para pasar los datos a unas variables, y llamar una función de registro siempre que se de click sobre el botón.</p></br>
 <p align="center">
-  <img src="/Capturas/mainDos.jpg" width="500">
+  <img src="/Capturas/mainDos.JPG" width="500">
 </p>
 <h3>registerUser</h3></br>
 <p>Esta función permite crear el registro y pasar los datos a la colección. Aquí se llama al método createUserWithEmailAndPassword del objeto FirebaseAuth, adjuntandole un evento que valide si dicha tarea se completo, si es asi, crreará un objeto Map de tipo Strign con los datos que guardaremos. A continuación con la referencia a Database guardaremos estos datos, a la refererencia se le adjunta un evento de validación, aqui si esta tarea es exitosa nos manda a la ventana de Perfil.</p></br>
